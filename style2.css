@@ -1,0 +1,250 @@
+html {
+    /* El tamaño de las cajas ahora son definidas hasta el borde */
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+*, *::before, *::after {
+    /* Buenas prácticas al momento de definir box-sizing*/
+    box-sizing: inherit;
+    /* Se elimina el margen y relleno del elemento body*/
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #2e4057;;
+}
+header {
+    display: inline-block;
+    width: 350px;
+    /*heigh: 130px*/
+}
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#img-logo {
+    width: 35%;
+    margin: 40px;
+}
+#text {
+    margin: auto 0px;
+}
+#logo-gep {
+    width: 100%;
+}
+h1 {
+    font-size: 200%;
+    color: #da4167;
+}
+#main {
+    display: flex;
+    height: calc(100vh - 160px);
+}
+#insert-text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 60%;
+    margin: 20px 3.75% 20px 7%;
+}
+#input-text {
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    color: #f6d8aD;
+    background-color: #2e4057;
+    border: none;
+    outline: none;
+}
+#input-text::placeholder {
+    color: #f6d8aD;
+}
+#set-war-but {
+    display: flex;
+    flex-direction: column;
+    align-items:initial;
+}
+#warning {
+    display: flex;
+    margin: 15px 0;
+    color: #f6d8aD;
+    align-items: center;
+}
+#img-warning {
+    width: 16px;
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+    margin-right: 10px;
+}
+#buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.two-button {
+    width: 45%;
+    padding: 15px;
+    border-radius: 40px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4d35e;
+}
+.snd-button {
+    background-color:#f6d8aD;
+}
+.two-button:hover, #copy-button:hover {
+    transform: scale(1.1);
+    background-color: #da4167;
+    transition: 0.3s;
+}
+.two-button:active, #copy-button:active {
+    transform: scale(1.05);
+    background-color: #da4167;
+    transition: 0.2s;
+}
+#output {
+    position: absolute;
+    top: 0px;
+    left: calc(70.75%);
+    width: 25%;
+    height: calc(100vh - 70px);
+    margin: 40px 3.75% 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4d35e;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #da4167;
+}
+#img-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#img-waiting {
+    width: 90%;
+}
+#img-waiting img {
+    width: 100%;
+}
+#wait-message {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 10%;
+    width: 90%;
+}
+#wait-message h3{
+    margin: 15px;
+}
+#decrypt {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10% 10% 10% 10%;
+    width: 80%;
+    height: 93%;
+    display: none;
+}
+#crypt-decrypt {
+    height: 90%;
+    overflow-y: scroll;
+    font-size: 0.8em;
+}
+#cdt {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#whatis {
+    margin-bottom: 5%;
+}
+#copy-button {
+    width: 80%;
+    padding: 15px;
+    border-radius: 40px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1fffbb;
+    margin-top: 20px;
+}
+footer {
+    color: #1fffbb;
+    margin-left: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    #main {
+        height: auto;
+        justify-content: space-between;
+    }
+    #input-text {
+        margin-bottom: 25vh;
+    }
+    #img-waiting {
+        display: none;
+    }
+    #output {
+        position: initial;
+        width: 80%;
+        margin: 20px 10%;
+        height: auto;
+    }
+    #decrypt {
+        margin-bottom: 30px;
+    }
+    #crypt-decrypt {
+        height: auto;
+        overflow: auto;
+    }
+    #main {
+        display: flex;
+        flex-direction: column;
+    }
+    #insert-text {
+        width: 80%;
+        margin: 20px 10%;
+    }
+    footer {
+        display: flex;
+        width: 100%;
+        margin: 0px;
+        justify-content: center;
+    }
+    footer p {
+        margin: 20px;
+    }
+}
+@media screen and (max-width: 375px){
+    header {
+        width: 100%;
+    }
+    #header {
+        width: 100%;
+        margin: 0px;
+    }
+    #img-logo {
+        width: 30%;
+        margin: 5%;
+    }
+    #input-text, #wait-message h3{
+        font-size: 1em;
+    }
+    #warning span {
+        font-size: 0.7em;
+    }
+    #buttons {
+        flex-direction: column;
+        align-items: center;
+        height: 130px;
+    }
+    .two-button {
+        width: 90%;
+    }
+    footer p {
+        text-align: center;
+        font-size: 0.7em;
+    }
+}

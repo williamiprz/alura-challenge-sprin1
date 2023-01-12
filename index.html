@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/LOGO2.png" tittle="icono-gep" sizes="32x32">
+  <link rel="stylesheet" type="text/css" href="style2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+  <title>Encriptador</title>
+</head>
+<body>
+  <header>
+    <div id="header">
+      <div id="img-logo">
+        <img src="img/LOGO2.png" alt="logo-GEP" id="logo-gep">
+      </div>
+      <div id="text">
+        <h1>Encriptador</h1>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <div id="insert-text">
+      <input type="text" placeholder="Ingrese el texto en este espacio" id="input-text" autofocus>
+      <div id="set-war-but">
+        <div id="warning">
+          <img src="img/warning.png" alt="warning" id="img-warning">
+          <span>Solo letras minúsculas y sin acentos</span>
+        </div>
+        <div id="buttons">
+          <input type="button" value="Encriptar" class="two-button" id="encriptar">
+          <input type="button" value="Desencriptar" class="two-button snd-button" id="desencriptar">
+        </div>
+      </div>
+    </div>
+    <div id="output">
+      <div id="img-message">
+        <div id="img-waiting">
+          <img src="img/waiting.png" alt="guy waiting" id="guy-wait">
+        </div>
+        <div id="wait-message">
+          <h3>Ningún mensaje encontrado</h3>
+          <p>Ingresa el texto que desees desencriptar</p>
+        </div>
+      </div>
+      <div id="decrypt">
+        <div id="cdt">
+          <h3 id="whatis"></h3>
+          <p id="crypt-decrypt"></p>
+        </div>
+        <input type="button" value="Copiar" id="copy-button">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>Powered by GEP in collaboration with Alura</p>
+  </footer>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
